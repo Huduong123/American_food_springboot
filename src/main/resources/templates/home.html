@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+
+<div layout:fragment="main-content">
+
+    <!-- PHẦN GET STARTED VÀ HÌNH TRANG TRÍ -->
+    <div class="hero-section-getstated">
+        <img class="shapes-42" th:src="@{/default/images/shapes-42.jpg}" alt="">
+        <div class="l-constrained-hero">
+            <div class="images group">
+                <img class="place-your-images-here-double-click-to-edit" th:src="@{/default/images/place_your_images_here_do_11.jpg}" alt="">
+                <img class="place-your-images-here-double-click-to-edit-2" th:src="@{/default/images/place_your_images_here_do_12.png}" alt="">
+            </div>
+
+            <div class="shapes-holder">
+                <img class="shapes-2" th:src="@{/default/images/shapes_27.png}" alt="">
+            </div>
+            <img class="shapes-3" th:src="@{/default/images/shapes_40.png}" alt="">
+            <img class="shape" th:src="@{/default/images/shape_25.png}" alt="">
+
+            <div class="text">
+                <p class="text-2">Popular belief simply random text<br>roots in a piece of classical</p>
+                <div class="row-4 group">
+                    <div class="col-12">
+                        <p class="text-3">Pellentesque habitant morbi tristique senectus et netus et malesuada<br>fames ac turpis egestas.</p>
+                        <div class="button">Get Started</div>
+                    </div>
+                    <img class="shape-2" th:src="@{/default/images/shape_30.png}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Phần Header -->
+
+
+
+
+    <!--Start Most Popular Recipe -->
+
+    <div class="background-3">
+        <div class="l-constrained-5">
+            <p class="text-7">Most Popular Recipe</p>
+            <img class="shapes-4" th:src="@{/default/images/shapes_33.png}" alt="" width="55" height="8">
+            <p class="text-8">Pellentesque habitant morbi tristique senectus et netus et malesuada<br>fames ac turpis egestas.</p>
+            <img class="shape-3" th:src="@{/default/images/shape_27.png}" alt="" width="36" height="35">
+            <div class="row-5 group">
+                <img class="shapes-5" th:src="@{/default/images/shapes_34.png}" alt="" width="55" height="8">
+                <div class="product">
+                    <img class="mask" th:src="@{/default/images/mask_6.jpg}" alt="">
+                    <div class="text-9 group">
+                        <p class="pasta">Pasta</p>
+                        <p class="text-10">$30</p>
+                    </div>
+                </div>
+                <div class="product-2 group">
+                    <img class="mask-2" th:src="@{/default/images/mask_5.jpg}" alt="">
+                    <div class="text-11 group">
+                        <p class="text-12">Hod Dog</p>
+                        <p class="text-13">$30</p>
+                    </div>
+                </div>
+                <div class="product-3 group">
+                    <img class="mask-3" th:src="@{/default/images/mask_7.jpg}" alt="">
+                    <div class="text-14 group">
+                        <p class="hamburger">Hamburger</p>
+                        <p class="text-15">$30</p>
+                    </div>
+                </div>
+                <img class="shape-4" th:src="@{/default/images/shape_28.png}" alt="" width="46" height="52">
+            </div>
+            <div class="row-3 no-space-between-inline-blocks">
+                <div class="shapes-6"></div>
+                <div class="shapes-7"></div>
+                <div class="shapes-8"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Most Popular Recipe -->
+
+
+    <!-- Most  Order Now -->
+    <div class="background-4">
+        <div class="l-constrained-4">
+            <div class="design">
+                <div class="shapes-9"></div>
+                <div class="shapes-10"></div>
+            </div>
+            <div class="design-2 group">
+                <div class="col-11">
+                    <div class="wrapper-7">
+                        <img class="mask-4" th:src="@{/default/images/mask_4.png}" alt="">
+                        <img class="shapes-11" th:src="@{/default/images/shapes_26.png}" alt="" width="110" height="16">
+                        <img class="shape-5" th:src="@{/default/images/shape_25.png}" alt="" width="58" height="65">
+                    </div>
+                    <img class="shapes-12" th:src="@{/default/images/shapes_27.png}" alt="" width="74" height="11">
+                </div>
+                <div class="col-7">
+                    <div class="text-16">
+                        <p class="text-17">Order Now!<br>and Get 50% Off</p>
+                        <div class="shapes-13"></div>
+                        <p class="text-18">Pellentesque habitant morbi tristique senectus et netus et malesuada<br>fames ac turpis egestas.</p>
+                        <div class="button-2">
+                            Shop Now
+                        </div>
+                    </div>
+                    <img class="shape-6" th:src="@{/default/images/shape_26.png}" alt="" width="46" height="51">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End  Order Now -->
+
+
+    <!--StartGreat Taste -->
+
+    <div class="background-5">
+        <div class="l-constrained-3">
+            <div class="design-3">
+                <div class="shapes-14"></div>
+                <div class="shapes-15"></div>
+            </div>
+            <div class="design-4 group">
+                <div class="row-2">
+                    <div class="text-20">
+                        <p class="text-21">Great Taste<br>and Good Quality</p>
+                        <p class="text-22">Pellentesque habitant morbi tristique senectus et netus et malesuada<br>fames ac turpis egestas.</p>
+                        <div class="button-3">
+                            Shop Now
+                        </div>
+                    </div>
+                    <img class="shape-7" th:src="@{/default/images/shape_24.png}" alt="" width="46" height="51">
+                </div>
+                <div class="col-9">
+                    <div class="wrapper-5">
+                        <img class="mask-5" th:src="@{/default/images/mask_3.png}" alt="">
+                        <img class="shapes-16" th:src="@{/default/images/shapes_21.png}" alt="" width="110" height="16">
+                        <img class="shape-8" th:src="@{/default/images/shape_23.png}" alt="" width="58" height="65">
+                    </div>
+                    <img class="shapes-17" th:src="@{/default/images/shapes_22.png}" alt="" width="74" height="11">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Great Taste -->
+
+
+    <!--Start How It Works -->
+
+    <div class="background-6">
+        <div class="images-2 group">
+            <img class="place-your-images-here-double-click-to-edit-3" th:src="@{/default/images/place_your_images_here_do_4.png}" alt="" width="275" height="570">
+            <div class="wrapper-2">
+                <img class="place-your-images-here-double-click-to-edit-4" th:src="@{/default/images/place_your_images_here_do_5.png}" alt="" width="402" height="564">
+                <div class="shapes-18"></div>
+                <div class="col-2">
+                    <img class="place-your-image-here-double-click-to-edit" th:src="@{/default/images/place_your_image_here_dou.png}" alt="" width="66" height="68">
+                    <img class="shapes-19" th:src="@{/default/images/shapes_10.png}" alt="" width="29" height="6">
+                </div>
+                <img class="shapes-20" th:src="@{/default/images/shapes_9.png}" alt="" width="44" height="7">
+                <img class="shape-9" th:src="@{/default/images/shape_17.png}" alt="" width="24" height="26">
+                <img class="shape-10" th:src="@{/default/images/shape_18.png}" alt="" width="19" height="21">
+                <div class="shapes-21"></div>
+                <div class="col-3">
+                    <img class="place-your-image-here-double-click-to-edit-2" th:src="@{/default/images/place_your_image_here_dou_2.png}" alt="" width="68" height="68">
+                    <img class="shapes-22" th:src="@{/default/images/shapes_10.png}" alt="" width="30" height="6">
+                </div>
+                <img class="shapes-23" th:src="@{/default/images/shapes_9.png}" alt="" width="44" height="7">
+                <img class="shape-11" th:src="@{/default/images/shape_17.png}" alt="" width="24" height="27">
+                <img class="shape-12" th:src="@{/default/images/shape_18.png}" alt="" width="19" height="21">
+                <div class="design-5">
+                    <div class="shapes-24"></div>
+                    <div class="col-4">
+                        <img class="place-your-image-here-double-click-to-edit-3" th:src="@{/default/images/place_your_image_here_dou_3.png}" alt="" width="68" height="68">
+                        <img class="shapes-25" th:src="@{/default/images/shapes_10.png}" alt="" width="30" height="6">
+                    </div>
+                    <img class="shapes-26" th:src="@{/default/images/shapes_17.png}" alt="" width="44" height="7">
+                    <img class="shape-13" th:src="@{/default/images/shape_17.png}" alt="" width="24" height="27">
+                    <img class="shape-14" th:src="@{/default/images/shape_18.png}" alt="" width="19" height="21">
+                </div>
+                <img class="arrow" th:src="@{/default/images/arrow.png}" alt="" width="28" height="20">
+                <img class="arrow-2" th:src="@{/default/images/arrow.png}" alt="" width="28" height="22">
+                <div class="text-24">
+                    <p class="text-25">How it Works</p>
+                    <p class="text-26">Pellentesque habitant morbi tristique senectus et netus et malesuada<br>fames ac turpis egestas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--End How It Works -->
+
+    <!--Start Our Best Chef -->
+    <div class="background-7">
+        <div class="l-constrained-2">
+            <p class="text-27">Our Best Chef</p>
+            <div class="wrapper-8">
+                <div class="mask-holder">
+                    <div class="profile-text">
+                        <p class="text-28">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                        <p class="text-29">Daniel Aiello</p>
+                        <p class="text-30">Lead Chef</p>
+                    </div>
+                </div>
+                <img class="place-your-images-here-double-click-to-edit-5" th:src="@{/default/images/place_your_images_here_do_3.png}" alt="" width="283" height="447">
+                <p class="text-31">Pellentesque habitant morbi tristique senectus et netus et malesuada<br>fames ac turpis egestas.</p>
+            </div>
+        </div>
+    </div>
+    <!--End Our Best Chef -->
+
+    <!--Start Company Profile -->
+    <div class="background-8">
+        <div class="l-constrained group">
+            <div class="shape-holder">
+                <img class="shape-15" th:src="@{/default/images/shape_16.png}" alt="" width="71" height="91">
+            </div>
+            <div class="col-5">
+                <div class="text-32">
+                    <p class="text-33">Company Profile</p>
+                    <p class="text-34">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="social-media match-height group">
+                    <div class="facebook">
+                        <img class="shape-16" th:src="@{/default/images/shape_15.png}" alt="" width="11" height="22">
+                    </div>
+                    <div class="instagram">
+                        <img class="shape-17" th:src="@{/default/images/shape_13.png}" alt="" width="23" height="24">
+                    </div>
+                    <div class="twitter">
+                        <img class="shape-18" th:src="@{/default/images/shape_11.png}" alt="" width="23" height="19">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--End Company Profile -->
+
+    <!--Start Contact Us -->
+    <div class="images-3">
+        <div class="col">
+            <div class="text-35">
+                Contact Us
+            </div>
+            <div class="field">
+                Your Name
+            </div>
+            <div class="field-2">
+                Gender
+            </div>
+            <div class="field-3">
+                Messages
+            </div>
+            <div class="button-4">
+                Send Messages
+            </div>
+        </div>
+    </div>
+    <!--End Contact Us -->
+</div>
+
+
+
+
+</body>
+</html>

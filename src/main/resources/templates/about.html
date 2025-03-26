@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>About Page</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <!--Start Company Profile -->
+
+    <div class="background-8">
+
+        <div class="l-constrained group">
+
+            <div class="shape-holder">
+                <img class="shape-15" th:src="@{/default/images/shape_16.png}" alt="" width="71" height="91">
+            </div>
+            <div class="col-5">
+                <div class="text-32">
+                    <p class="text-33">Company Profile</p>
+                    <p class="text-34">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="social-media match-height group">
+                    <div class="facebook">
+                        <img class="shape-16" th:src="@{/default/images/shape_15.png}" alt="" width="11" height="22">
+                    </div>
+                    <div class="instagram">
+                        <img class="shape-17" th:src="@{/default/images/shape_13.png}" alt="" width="23" height="24">
+                    </div>
+                    <div class="twitter">
+                        <img class="shape-18" th:src="@{/default/images/shape_11.png}" alt="" width="23" height="19">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--End Company Profile -->
+</div>
+</body>
+</html>

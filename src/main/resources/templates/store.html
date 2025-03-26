@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Store</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <div class="container py-5 page-with-header">
+    <div class="container py-5">
+        <h2 class="store-heading text-center fw-bold">Our Store Locations</h2>
+        <p class="store-subtitle text-center text-muted">Find the nearest American Food store to you</p>
+
+        <div class="row g-4">
+            <!-- Store 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card store-card p-3">
+                    <img th:src="@{/default/images/store6.jpg}" alt="Store Orlando" class="store-img mb-3">
+                    <div class="store-title">American Food - Orlando </div>
+                    <p class="text-muted mb-1">2500 S Semoran Blvd, Orlando, FL 32822, USA</p>
+                    <p class="text-muted mb-0">Open: 9:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Store 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card store-card p-3">
+                    <img th:src="@{/default/images/store1.png}" alt="Store Miami" class="store-img mb-3">
+                    <div class="store-title">American Food - Miami</div>
+                    <p class="text-muted mb-1">3251 S Miami Ave, Miami, FL 33129, USA</p>
+                    <p class="text-muted mb-0">Open: 8:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Store 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card store-card p-3">
+                    <img th:src="@{/default/images/store2.jpg}" alt="Store Texas" class="store-img mb-3">
+                    <div class="store-title">American Food - Texas</div>
+                    <p class="text-muted mb-1">3406 E 17th St, Austin, TX 78721, USA</p>
+                    <p class="text-muted mb-0">Open: 10:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Store 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card store-card p-3">
+                    <img th:src="@{/default/images/store3.jpg}" alt="Store San Francisco" class="store-img mb-3">
+                    <div class="store-title">American Food - San Francisco</div>
+                    <p class="text-muted mb-1">1521 Moraga St, San Francisco, CA 94122, USA</p>
+                    <p class="text-muted mb-0">Open: 9:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Store 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card store-card p-3">
+                    <img th:src="@{/default/images/store4.jpg}" alt="Store Washington" class="store-img mb-3">
+                    <div class="store-title">American Food - Washington</div>
+                    <p class="text-muted mb-1">2515 Bladensburg Rd NE, Washington, DC 20018, USA</p>
+                    <p class="text-muted mb-0">Open: 8:30 AM - 9:30 PM</p>
+                </div>
+            </div>
+
+            <!-- Store 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card store-card p-3">
+                    <img th:src="@{/default/images/store5.jpg}" alt="Store Brooklyn" class="store-img mb-3">
+                    <div class="store-title">American Food - Brooklyn</div>
+                    <p class="text-muted mb-1">3175 Fulton St, Brooklyn, NY 11208, USA</p>
+                    <p class="text-muted mb-0">Open: 9:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

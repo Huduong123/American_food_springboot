@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+    <div class="container py-5 page-with-header">
+    <div class="container menu-section">
+        <h2 class="menu-title">Our Delicious American Menu</h2>
+        <!-- Thêm phần chọn category -->
+        <div class="category-filter text-center mb-4">
+            <button class="btn btn-outline-primary mx-2 filter-btn active" data-category="all">All</button>
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-category="hamburger">Hamburger</button>
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-category="hotdog">Hotdog</button>
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-category="pizza">Pizza</button>
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-category="fries">Fries</button>
+            <button class="btn btn-outline-primary mx-2 filter-btn" data-category="drink">Drink</button>
+        </div>
+
+
+        <div class="row g-4">
+            <div class="col-md-4 menu-item"
+                 th:each="product : ${products}"
+                 th:data-category="${#strings.toLowerCase(product.category)}">
+                <div class="card menu-card">
+                    <img th:src="@{'/default/images/' + ${product.image_url}}" class="card-img-top menu-img" th:alt="${product.name}">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${product.name}">Tên món</h5>
+                        <p class="card-text" th:text="${product.description}">Mô tả</p>
+                        <div class="price-tag" th:text="'$' + ${product.price}">$0.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+</body>
+</html>
