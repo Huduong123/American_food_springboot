@@ -1,10 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{system/layout}">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>List Authorities</title>
 </head>
 <body>
+<div layout:fragment="main-content">
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="mb-0">Danh sách phân quyền</h3>
+            <a th:href="@{/system/authorities/authorities-form-insert}" class="btn btn-success">Thêm quyền</a>
+        </div>
 
+        <form class="row g-3 mb-4" method="get" th:action="@{/system/authorities/list-authorities}">
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="username" placeholder="Tìm theo tên đăng nhập"
+                       th:value="${username}">
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" name="authority" th:value="${authority}">
+                    <option value="">-- Tất cả quyền --</option>
+                    <option value="ROLE_USER">ROLE_USER</option>
+                    <option value="ROLE_ADMIN">ROLE_ADMIN</option>
+                    <option value="ROLE_SYSTEM">ROLE_SYSTEM</option>
+                </select>
+            </div>
+            <div class="col-md-4 d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                <a th:href="@{/system/authorities/list-authorities}" class="btn btn-secondary">Xóa lọc</a>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên đăng nhập</th>
+                    <th>Quyền</th>
+                    <th>Hành động</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="auth : ${authorities}">
+                    <td th:text="${auth.id}"></td>
+                    <td th:text="${auth.username}"></td>
+                    <td th:text="${auth.authority}"></td>
+                    <td>
+                        <div class="d-flex gap-2">
+                            <a th:href="@{'/system/authorities/authorities-form-update'(id=${auth.id})}"
+                               class="btn btn-warning btn-sm">Sửa</a>
+                            <a th:href="@{'/system/authorities/delete'(id=${auth.id})}"
+                               onclick="return confirm('Bạn có chắc chắn muốn xóa không?')"
+                               class="btn btn-danger btn-sm">Xóa</a>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 </body>
 </html>

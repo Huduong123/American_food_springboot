@@ -1,6 +1,7 @@
 package com.project.CKT3.ProjectCuoiKyT3.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "authorities")
@@ -11,9 +12,11 @@ public class Authority {
     @Column(name = "id")
     private int id;
 
+    @NotBlank(message = "Tên đăng nhập không được để trống!")
     @Column(name= "username")
     private String username;
 
+    @NotBlank(message = "Quyền không được để trống!")
     @Column(name = "authority")
     private String authority;
 
