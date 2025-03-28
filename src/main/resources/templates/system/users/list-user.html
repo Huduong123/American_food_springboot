@@ -13,8 +13,45 @@
 
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h2 class="mb-0">Danh sách người dùng</h2>
-            <a class="btn btn-success" th:href="@{/system/users/user-form-insert}">➕ Thêm người dùng</a>
+            <a class="btn btn-success" th:href="@{/system/users/user-form-insert}">Thêm người dùng</a>
         </div>
+        <form class="row g-2 mb-3" method="get" th:action="@{/system/users/list-user}">
+            <!-- Các ô tìm kiếm... -->
+            <div class="col-md-2">
+                <input type="text" name="name" class="form-control" placeholder="Tên đăng nhập" th:value="${param.name}">
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="fullName" class="form-control" placeholder="Họ tên" th:value="${param.fullName}">
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="email" class="form-control" placeholder="Email" th:value="${param.email}">
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="phone" class="form-control" placeholder="SĐT" th:value="${param.phone}">
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="address" class="form-control" placeholder="Địa chỉ" th:value="${param.address}">
+            </div>
+            <div class="col-md-2">
+                <select name="enable" class="form-select">
+                    <option value="">-- Trạng thái --</option>
+                    <option value="1" th:selected="${param.enable == '1'}">Hoạt động</option>
+                    <option value="0" th:selected="${param.enable == '0'}">Bị khóa</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <input type="date" name="createdAt" class="form-control" th:value="${param.createdAt}">
+            </div>
+
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+            </div>
+
+            <div class="col-md-2">
+                <a th:href="@{/system/users/list-user}" class="btn btn-secondary w-100">Reset</a>
+            </div>
+        </form>
+
 
         <table class="table table-bordered table-hover">
             <thead class="table-light">
@@ -45,10 +82,10 @@
                 </td>
                 <td th:text="${#temporals.format(user.createdAt, 'dd/MM/yyyy HH:mm')}">01/01/2024</td>
                 <td>
-                    <a th:href="@{'/system/users/edit/' + ${user.id}}" class="btn btn-sm btn-warning">✏️ Sửa</a>
-                    <a th:href="@{'/system/users/delete/' + ${user.id}}"
+                    <a th:href="@{'/system/users/user-form-update?id=' + ${user.id}}" class="btn btn-sm btn-warning">Sửa</a>
+                    <a th:href="@{'/system/users/delete?id=' + ${user.id}}"
                        onclick="return confirm('Bạn có chắc chắn muốn xóa người dùng này?')"
-                       class="btn btn-sm btn-danger">🗑️ Xóa</a>
+                       class="btn btn-sm btn-danger">Xóa</a>
                 </td>
             </tr>
             </tbody>

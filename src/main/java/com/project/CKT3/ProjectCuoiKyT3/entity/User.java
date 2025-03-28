@@ -1,6 +1,9 @@
 package com.project.CKT3.ProjectCuoiKyT3.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 import java.time.LocalDateTime;
 
@@ -12,21 +15,46 @@ public class User {
     @Column(name = "id")
     private int id;
 
+    @Pattern(
+            regexp = "^(?=.*[\\p{L}])[\\p{L}0-9 ]+$",
+            message = "Tên đăng nhập không được chứa ký tự đặc biệt và phải có ít nhất 1 chữ cái"
+    )
+    @NotBlank(message = "Tên đăng nhập không được để trống")
+    @Size(min =5, message = "Tên đăng nhập phải có ít nhất 5 ký tự")
     @Column(name = "username")
     private String name;
 
+    @Pattern(regexp = "^[\\p{L} ]+$", message = "Họ và tên chỉ được chứa chữ cái và khoảng trắng, không có số/ký tự đặc biệt")
+    @Size(min = 6, message = "Họ và tên phải có ít nhất 6 ký tự")
+    @NotBlank(message = "Họ và tên không được để trống")
     @Column(name = "full_name")
     private String fullName;
 
+    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@gmail\\.com$", message = "Email phải đúng định dạng và kết thúc bằng @gmail.com")
+    @NotBlank(message = "Email không được để trống")
     @Column(name = "email")
     private String email;
 
+    @Pattern(
+            regexp = "^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{1,}$",
+            message = "Mật khẩu phải có ít nhất 1 chữ hoa và 1 ký tự đặc biệt"
+    )
+    @Size(min =5, message = "Mật khẩu phải có ít nhất 5 ký tự")
+    @NotBlank(message = "Mật khẩu không được để trống")
     @Column(name = "password")
     private String password;
 
+    @Pattern(regexp = "^[0-9]{9,15}$", message = "Số điện thoại chỉ được chứa số, không có chữ hoặc ký tự đặc biệt")
+    @Size(min = 9, message = "Số điện thoại phải có ít nhất 9 số")
+    @NotBlank(message = "Số điện thoại không được để trống")
     @Column(name = "phone")
     private String phone;
 
+    @Pattern(
+            regexp = "^[\\p{L}0-9\\s\\-,./]+$",
+            message = "Địa chỉ không được chứa ký tự đặc biệt (chỉ cho phép chữ, số, khoảng trắng, dấu -, ., /)"
+    )
+    @NotBlank(message = "Địa chỉ không được để trống")
     @Column(name = "address")
     private String address;
 

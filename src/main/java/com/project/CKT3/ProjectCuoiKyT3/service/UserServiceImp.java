@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -64,5 +65,21 @@ public class UserServiceImp implements UserService {
     @Override
     public User findByUsername(String username) {
         return userDAO.findByUsername(username);
+    }
+
+    @Override
+    public User findByEmail(String email) {
+        return userDAO.findByEmail(email);
+    }
+
+    @Override
+    public User findByPhone(String phone) {
+        return userDAO.findByPhone(phone);
+    }
+
+
+    @Override
+    public List<User> searchUsers(String name, String fullName, String email, String phone, String address, Integer enable, LocalDateTime createdAt) {
+        return userDAO.searchUsers(name, fullName, email, phone, address, enable, createdAt);
     }
 }
