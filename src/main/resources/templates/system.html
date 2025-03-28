@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{system/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>System - DashBoard</title>
+</head>
+<body>
+<div layout:fragment="main-content">
+
+
+  <!-- Dashboard Info Cards -->
+  <div class="row my-4">
+    <div class="col-md-3">
+      <div class="card p-3">
+        <div class="card-body">
+          <h5>EARNINGS (MONTHLY)</h5>
+          <h4>$40,000</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card p-3">
+        <div class="card-body">
+          <h5>EARNINGS (ANNUAL)</h5>
+          <h4>$215,000</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card p-3">
+        <div class="card-body">
+          <h5>TASKS</h5>
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width: 50%">50%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card p-3">
+        <div class="card-body">
+          <h5>PENDING REQUESTS</h5>
+          <h4>18</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="row mb-4">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header fw-bold text-success">Earnings Overview</div>
+        <div class="card-body">
+          <canvas id="lineChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header fw-bold text-success">Revenue Sources</div>
+        <div class="card-body">
+          <canvas id="doughnutChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

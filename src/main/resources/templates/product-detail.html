@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi tiết sản phẩm</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div layout:fragment="main-content" class="background-7">
+    <div class="container position-relative py-5">
+
+        <!-- Nút quay lại -->
+        <a href="/menu" class="btn btn-outline-secondary back-button-fixed">
+            ← Quay lại Menu
+        </a>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10 product-detail-card d-flex flex-column flex-md-row align-items-center gap-5">
+                <!-- Hình ảnh sản phẩm -->
+                <div class="text-center">
+                    <img th:src="@{'/default/images/' + ${product.image_url}}"
+                         th:alt="${product.name}"
+                         style="max-width: 400px; width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                </div>
+
+                <!-- Thông tin sản phẩm -->
+                <div class="flex-grow-1">
+                    <h1 class="product-title" th:text="${product.name}">Tên sản phẩm</h1>
+                    <p class="product-info-label">Loại: <span class="product-info-text" th:text="${product.category}">Loại món</span></p>
+                    <p class="product-info-label">Mô tả:</p>
+                    <p class="product-info-text" th:text="${product.description}">Mô tả sản phẩm</p>
+                    <p class="product-price">Giá: <span th:text="'$' + ${product.price}">$0.00</span></p>
+                    <p class="product-info-text">Số lượng còn lại: <strong th:text="${product.quantity}">0</strong></p>
+
+                    <button class="btn btn-add-cart mt-3">
+                        🛒 Thêm vào giỏ hàng
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

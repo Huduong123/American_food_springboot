@@ -1,0 +1,35 @@
+body {
+    background-color: #f8f9fc;
+}
+.sidebar {
+    background-color: #198754;
+    min-height: 100vh;
+    color: white;
+}
+.sidebar .nav-link {
+    color: white;
+    font-weight: 500;
+}
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #146c43;
+    border-left: 4px solid white;
+}
+.topbar {
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+}
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.card .card-body h5 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #198754;
+}
+.chart-container {
+    position: relative;
+    height: 300px;
+}
